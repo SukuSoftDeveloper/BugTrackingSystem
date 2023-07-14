@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    @if(User.Identity.IsAuthenticated)
+            {
+                <h2>Welcome User @(User.Identity.IsAuthenticated ? HttpContext.Current.User.Identity.Name :"Guest")</h2>
+            }
+</div>
+
